@@ -1,3 +1,3 @@
-Contains the ML20M data split by global time stamp so that the first 70% events are in 
+Contains the Ta-feng data split by global time stamp so that the first 70% events are in 
 the train set and the next 15% are in the validation set and the last 15% are
-in the test set. The data is in user,item tuple format
+in the test set. The data is in user,item,timestamp tuple format
