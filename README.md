@@ -3,7 +3,9 @@ Implementation of [*Conformative filtering for Implicit Feedback Data*](https://
 
 To replicate the results on the ta-feng dataset
 
--Learn the model using: 
+- Extract COF.jar from COF.zip or alternatively compile it from source
+
+- Learn the model using: 
 ```
 java -Xmx32764M -cp COF.jar FastHLTA/ForestLTM PATHTOFILE/tafang-timesort-user-item-train70Andval15 10 3 0.01 3 tafang-timesort-item-user-train70AndVal15-ForestLTM 5 10 500 1 25 all 10 3
 ```
@@ -16,7 +18,7 @@ We use a fast variant of HLTA with restricted clique tree propagation. Please se
 
 Once the model .bif file is available we can use it for recommendation.
 
--Make recommendations and evaluate
+- Make recommendations and evaluate
 ```
 java -Xmx32096M -cp COF.jar ItemRecommendation --overlap-items --training-file=PATHTOFILE/tafang-timesort-user-item-train70Andval15.txt --test-   file=PATHTOFILE/tafang-timesort-user-item-test15.txt --recommender=LTM_FR --recommender-options="modelPath=PATHTOFILE/tafang-timesort-item-user-train70AndVal15-ForestLTM.bif latentLevel=1 historySize=40 timeInGroupPreference=true timeRestrictedTrainfileName=PATHTOFILE/tafang-timesort-user-item-train70Andval15.txt" --test-users=PATHTOFILE/tafang-timesort-user-item-train70Andval15-users.txt
 ```
