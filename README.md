@@ -5,10 +5,10 @@ To replicate the results on the ta-feng dataset
 
 -Learn the model using: 
 ```
-java -Xmx32764M -cp COF.jar ForestLTM PATHTOFILE/tafang-timesort-user-item-train70Andval15 10 3 0.01 3 tafang-timesort-item-user-train70AndVal15-ForestLTM 5 10 500 1 25 all 10 3
+java -Xmx32764M -cp COF.jar FastHLTA/ForestLTM PATHTOFILE/tafang-timesort-user-item-train70Andval15 10 3 0.01 3 tafang-timesort-item-user-train70AndVal15-ForestLTM 5 10 500 1 25 all 10 3
 ```
 
-Please see model/FastHLTA/ForestLTM.java for details of the input parameters. However, for most purpose you will just need to provide the training data.
+Please see model/FastHLTA/ForestLTM.java for details of the input parameters. However, for most purposes you will just need to provide the training data.
 
 This would output the model tafang-timesort-item-user-train70AndVal15-ForestLTM.bif. We also provide the pre-trained model in case you want to skip the model building. 
 
